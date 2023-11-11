@@ -1,4 +1,4 @@
-const db = require("./config/connection.js");
+const db = require("../config/connection.js");
 
 const viewAllDepartments = () => {
     db.query('SELECT * FROM department', (err, results) => {
