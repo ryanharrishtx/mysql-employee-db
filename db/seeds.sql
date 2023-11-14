@@ -24,9 +24,3 @@ VALUES ("Ryan", "Harris", 2, NULL),
        ("Meral", "Stillwell", 6, 5),
        ("Katie", "Tribeca", 7, NULL),
        ("Dustin", "Hoffman", 8, NULL);
-
-
-
-
-
-       
