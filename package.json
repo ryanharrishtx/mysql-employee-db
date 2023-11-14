@@ -1,8 +1,8 @@
 {
   "name": "mysql-employee-db",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
@@ -15,6 +15,8 @@
     "inquirer": "^8.2.4",
     "mysql2": "^3.6.3",
     "nodemon": "^3.0.1",
+    "readline": "^1.3.0",
     "sequelize": "^6.34.0"
-  }
+  },
+  "description": ""
 }

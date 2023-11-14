@@ -2,7 +2,9 @@ const inquirer = require("inquirer");
 const db = require("./config/connection.js");
 
 const { viewAllDepartments, addDepartment } = require("./controllers/departmentsController.js");
-const { viewAllEmployees, addEmployee } = require("./controllers/employeesController.js");
+const { viewAllEmployees, addEmployee, updateEmployeeRole } = require("./controllers/employeesController.js");
+const { viewAllRoles, addRole } = require("./controllers/rolesController.js");
+
 
 db.authenticate().then(() => {
     console.log("Database connected...");
@@ -27,7 +29,6 @@ async function runApp() {
                         "Exit"
                     ],
                     name: "start",
-                    useArrowKeys: true,
                 },
             ]);
 
@@ -56,11 +57,10 @@ async function runApp() {
                 case "Exit":
                     console.log("Exiting the application. Goodbye!");
                     return;
+                }
             }
+        } catch (error) {
+            console.error("Error in runApp", error);
         }
-    } catch (error) {
-        console.error("Error in runApp", error);
     }
-}
-
-runApp();
+    runApp();
